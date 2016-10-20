@@ -16,7 +16,7 @@ Fake Server provides the ability to create endpoint to http requests that return
 Configuration is read from `config.json` file. All files paths are resolved relative to config file.
 Structure of the file is defined below:
 
-```json
+```javascript
 {
     "http": {
         "port": 8080 // port to use for http connections
@@ -33,7 +33,7 @@ Structure of the file is defined below:
 
 Each service defined in `services` field should look like this:
 
-```json
+```javascript
 {
             "path": "/", // enpoint on which service will be created
             "method": "post", // http method lowercase
