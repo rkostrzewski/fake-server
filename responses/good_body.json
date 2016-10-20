@@ -1,0 +1,9 @@
+{
+    "data": [
+        "some data"
+    ],
+    "foo": {
+        "bar": 1,
+        "baz": false
+    }
+}

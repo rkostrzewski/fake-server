@@ -1,0 +1,29 @@
+{
+  "name": "fake-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "debug": "devtool index.js",
+    "watch": "nodemon index.js",
+    "lint": "eslint src/**/*.js index.js test/**.js"
+  },
+  "author": "rkostrzewski",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "better-console": "^0.2.4",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "devtool": "^2.3.0",
+    "eslint": "^3.8.1",
+    "nodemon": "^1.11.0"
+  },
+  "engines": {
+    "node": ">=6.6.0",
+    "npm": ">=3.10.0"
+  }
+}

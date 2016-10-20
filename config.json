@@ -1,0 +1,39 @@
+{
+    "http": {
+        "port": 8080
+    },
+    "https": {
+        "enable": false,
+        "port": 433,
+        "privateKey": "",
+        "cert": ""
+    },
+    "services": [
+        {
+            "path": "/",
+            "method": "post",
+            "baseValidations": {
+                "errorHeaders": "./responses/error_headers.json",
+                "errorBody": "./responses/error_body.txt",
+                "validations": [
+                    "headers['authorization'] === 'Basic 1==' ? true : 401"
+                ]
+            },
+            "responses": [
+                {
+                    "headers": "./responses/good_headers.json",
+                    "body": "./responses/good_body.json",
+                    "statusCode": 200,
+                    "validations": [
+                        "body.baz === false",
+                        "!!headers['custom-header']",
+                        "!!body.arr.length"
+                    ],
+                    "transformations": [
+                        "./plugins/add-data"
+                    ]
+                }
+            ]
+        }
+    ]
+}
